@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* giving the background the colors */
+.gradient{
+    background: linear-gradient(90deg, #f9d1cf 50%, #7ad592 50%);
+}
+.shadow-one{
+    box-shadow: rgba(0, 0, 0, .09) 0px 20px 15px,
+    rgba(0, 0, 0, .09) 0px 4px 2px,
+    rgba(0, 0, 0, .09) 0px 8px 4px,
+    rgba(0, 0, 0, .09) 0px 26px 18px,
+    rgba(0, 0, 0, .09) 0px 60px 25px;
+}
+.shadow-two{
+    box-shadow: 6px 4px 4px -8px #000;
+}
+.drop-shadow-one{
+    --tw-drop-shadow: drop-shadow(0 50px 50px rgb(0 0 0 / 0.03));
+    filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+    -webkit-filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+/*  hamburger menu style */
+    /* hamburger menu */
+.hamburger{
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    transition: all 0.25s;
+    -webkit-transition: all 0.25s;
+    -moz-transition: all 0.25s;
+    -ms-transition: all 0.25s;
+    -o-transition: all 0.25s;
+    position: relative;
+}
+.hamburger-top,
+.hamburger-middle,
+.hamburger-bottom{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 24px;
+    height: 2px;
+    background-color: #000;
+    transform: rotate(0);
+    -webkit-transform: rotate(0);
+    -moz-transform: rotate(0);
+    -ms-transform: rotate(0);
+    -o-transform: rotate(0);
+    transition: all .5s;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -ms-transition: all .5s;
+    -o-transition: all .5s;
+}
+.hamburger-middle{
+    transform: translateY(7px);
+    -webkit-transform: translateY(7px);
+    -moz-transform: translateY(7px);
+    -ms-transform: translateY(7px);
+    -o-transform: translateY(7px);
+}
+.hamburger-bottom{
+    transform: translateY(14px);
+    -webkit-transform: translateY(14px);
+    -moz-transform: translateY(14px);
+    -ms-transform: translateY(14px);
+    -o-transform: translateY(14px);
+}
+
+.open{
+    transform: translate(0px);
+    -webkit-transform: translate(0px);
+    -moz-transform: translate(0px);
+    -ms-transform: translate(0px);
+    -o-transform: translate(0px);
+    
+    transform: rotate(90deg);
+    
+}
+
+.open .hamburger-top{
+    transform: rotate(45deg) translateY(6px) translate(6px);
+    -webkit-transform: rotate(45deg) translateY(6px) translate(6px);
+    -moz-transform: rotate(45deg) translateY(6px) translate(6px);
+    -ms-transform: rotate(45deg) translateY(6px) translate(6px);
+    -o-transform: rotate(45deg) translateY(6px) translate(6px);
+}
+.open .hamburger-middle{
+    display: none;
+}
+.open .hamburger-bottom{
+    transform: rotate(-45deg) translateY(6px) translate(-6px);
+    -webkit-transform: rotate(-45deg) translateY(6px) translate(-6px);
+    -moz-transform: rotate(-45deg) translateY(6px) translate(-6px);
+    -ms-transform: rotate(-45deg) translateY(6px) translate(-6px);
+    -o-transform: rotate(-45deg) translateY(6px) translate(-6px);
+}
+/*  end of hamburger menu style */
